@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Hotels in the best place in the world - Sedona">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="css/jquery.range.css" rel="stylesheet">
+	<script src="js/jQuery/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.range-min.js"></script>
+	<script src="js/hotels.js"></script>
+	<title>Sedona Hotels</title>
+</head>
+<body>
+<div class="container">
+	<header>
+		<nav>
+			<ul class="main-menu">
+				<li><a href="#">Информация</a></li>
+				<li><a href="#">Фото и видео</a></li>
+				<li class="main-menu__logo-bg">
+					<a href="index.html"><img src="images/Logo.png" alt="logo"></a><div></div></li>
+				<li><a href="#">Карта штата</a></li>
+				<li><a href="#">Гостиницы</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section class="filter-form">
+			<div>
+				<div class="filter-form__centering-block">
+					<p>Инфраструктура:</p>
+					<ul>
+						<li>
+							<label for="pool">
+								<input type="checkbox" id="pool" name="pool">
+								<span></span>Бассейн</label>
+						</li>
+						<li>
+							<label for="parking">
+								<input type="checkbox" id="parking" name="parking">
+								<span></span>Парковка</label>
+						</li>
+						<li>
+							<label for="wifi">
+							<input type="checkbox" id="wifi" name="wifi"><span></span>Wi-Fi</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div>
+				<div class="filter-form__centering-block">
+					<p>Тип жилья:</p>
+					<ul>
+						<li>
+							<label for="hotel">
+							<input type="checkbox" id="hotel" name="hotel"><span></span>Гостиница</label>
+						</li>
+						<li>
+							<label for="motel">
+							<input type="checkbox" id="motel" name="motel"><span></span>Мотель</label>
+						</li>
+						<li>
+							<label for="apartaments">
+							<input type="checkbox" id="apartaments" name="apartaments"><span></span>Апартаменты</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div></div>
+			<div class="filter-form__price-range">
+				<div class="filter-form__centering-block">
+					<p>Стоимость в сутки (Р):</p>
+					<div class="filter-form__min-max-price">
+						<div class="filter-form__vertical-devider"></div>
+						<label for="price-min">От<input type="number" id="price-min" name="price-min"></label>
+						<label for="price-max">До<input type="number" id="price-max" name="price-max"></label>
+					</div>
+					<div class="filter-form__range-slider-block">
+						<input class="range-slider" type="hidden" value="0,200000">
+					</div>
+				</div>
+			</div>
+	</section>
+	<section class="sort-view">
+		<div><h2>Найдено: </h2></div>
+		<div class="sort-view__sort-types"><p>Сортировка: <span class="sort-view__price">по цене</span>
+			<span class="sort-view__type">по типу</span>
+			<span class="sort-view__rating">по рейтингу</span></p></div>
+		<div><span class="sort-view__sort-button-up"></span><span class="sort-view__sort-button-down"></span></div>
+	</section>
+	<section class="result-view">
+		<article class="result-view_hotel">
+			<div class="result-view__image">
+				<img src="images/hotel_1.jpg" alt="Hotel">
+			</div>
+			<div>
+				<h2 class="result-view__hotel-name">Amara resort & Spa</h2>
+				<div class="result-view__description-block">
+					<div class="result-view__description">Гостиница</div><div class="result-view__description">от 3500 Р.</div>
+				</div>
+				<div class="result-view__buttons">
+					<a class="btn-more" href="#">Подробнее</a>
+					<a class="btn-reserve" href="#">Забронировать</a>
+				</div>
+			</div>
+			<div class="result-view__quality">
+				<div class="result-view__stars">
+					<img src="images/star.png" alt="stars">
+					<img src="images/star.png" alt="stars">
+					<img src="images/star.png" alt="stars">
+					<img src="images/star.png" alt="stars">
+				</div>
+				<p class="result-view__rating">Рейтинг 8,5</p>
+			</div>
+		</article>
+		<article class="result-view_hotel">
+			<div class="result-view__image">
+				<img src="images/hotel_2.jpg" alt="Hotel">
+			</div>
+			<div>
+				<h2 class="result-view__hotel-name">Desert Quail Inn</h2>
+				<div class="result-view__description-block">
+					<div class="result-view__description">Мотель</div><div class="result-view__description">от 2000 Р.</div>
+				</div>
+				<div class="result-view__buttons">
+					<a class="btn-more" href="#">Подробнее</a>
+					<a class="btn-reserve" href="#">Забронировать</a>
+				</div>
+			</div>
+			<div class="result-view__quality">
+				<div class="result-view__stars">
+					<img src="images/star.png" alt="stars">
+					<img src="images/star.png" alt="stars">
+				</div>
+				<p class="result-view__rating">Рейтинг 8,9</p>
+			</div>
+		</article>
+		<article class="result-view_hotel">
+			<div class="result-view__image">
+				<img src="images/hotel_3.jpg" alt="Hotel">
+			</div>
+			<div>
+				<h2 class="result-view__hotel-name">Villas At Poco Diablo</h2>
+				<div class="result-view__description-block">
+					<div class="result-view__description">Апартаменты</div><div class="result-view__description">от 4000 Р.</div>
+				</div>
+				<div class="result-view__buttons">
+					<a class="btn-more" href="#">Подробнее</a>
+					<a class="btn-reserve" href="#">Забронировать</a>
+				</div>
+			</div>
+			<div class="result-view__quality">
+				<div class="result-view__stars">
+					<img src="images/star.png" alt="stars">
+					<img src="images/star.png" alt="stars">
+					<img src="images/star.png" alt="stars">
+				</div>
+				<p class="result-view__rating">Рейтинг 9,2</p>
+			</div>
+		</article>
+	</section>
+	<footer class="footer">
+		<div>
+			<h2>#Visitsedona</h2>
+		</div>
+		<div>
+			<a href="#" class="btn-social btn-twitter"></a>
+			<a href="#" class="btn-social btn-facebook"></a>
+			<a href="#" class="btn-social btn-youtube"></a>
+		</div>
+		<div>Website by <a href="#" class="btn-copyright btn-creator"></a> for <a href="#" class="btn-copyright btn-customer"></a></div>
+	</footer>
+</div>
+</body>
+</html>
